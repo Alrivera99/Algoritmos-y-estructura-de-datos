@@ -4,6 +4,7 @@ using namespace std;
 
 void otherStructureDatas(){
    
+   // STRUCT
    struct PERSON { //typedef
        int age;
        float hight;
@@ -15,6 +16,7 @@ void otherStructureDatas(){
    
     cout << endl << "Age of dad: " << dad.age << "\nHight of mum " << dad.hight << endl;
    
+   // UNION
    union PERSON_u {
     int age;
     float hight; 
@@ -27,7 +29,20 @@ void otherStructureDatas(){
 
     cout << endl << "Age of mum: " << mum.age << "\nHight of mum " << mum.hight << endl;
 
-    cout << endl << "Size of dad(struct): " << sizeof(dad) << "\nSize of mum(struct): " << sizeof(mum);
+    // Comparacion de tamaños de memoria entre los dos
+    // Struct: Suma la memoria de todos los elementos - ES MEJOR
+    // Union: Tomas la memoria del elemento con mas memoria
+    cout << endl << "Size of dad(struct): " << sizeof(dad) << "\nSize of mum(union): " << sizeof(mum);
+
+    // ENUM
+    enum days {sunday, monday, tuesday, wednesday, thursday, friday, saturday};
+    enum days today = monday;
+
+    enum review {verybad=1, bad, normal, good, excelent};
+    enum review course = excelent;
+
+    //cout << endl << monday
+    cout << endl << endl << course << " stars!";
 
 }
 
